@@ -1,0 +1,19 @@
+{
+    "name": "ipfixprobe",
+    "prefix_path": "..",
+    "files": [
+        ".trustinsoft/libc/getopt_long.c",
+        "main.cpp"
+    ],
+    "cpp-extra-args": "-isystem . -I .trustinsoft/libpcap",
+    "cxx-cpp-extra-args": "-isystem . -I .trustinsoft/libpcap -include .trustinsoft/libc/timeradd.h",
+    "val-args": " -i u:abc:buffer=off -r traffic.pcap",
+    "filesystem": {
+        "files": [
+            {
+                "name": "traffic.pcap",
+                "from": "traffic-samples/bstats-sample.pcap"
+            }
+        ]
+    }
+}
